@@ -41,6 +41,19 @@ switch ($_GET['op']) {
         $result = $x-$y;
         echo "<h1>$x - $y = $result</h1>";
         break;
+    case 'divide':
+        if ($y == 0) {
+            echo "<h1>Cannot divide by zero!</h1>";
+        }
+        else {
+            $result = $x / $y;
+            echo "<h1>$x / $y = $result</h1>";
+        }
+        break;
+    case 'multiply':
+        $result = $x * $y;
+        echo "<h1>$x x $y = $result</h1>";
+        break;
     default:
         $op = $_GET['op'];
         echo "<h1>Unrecognized operation: $op</h1>";
